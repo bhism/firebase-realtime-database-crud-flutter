@@ -186,7 +186,7 @@ class _UpdateRecordState extends State<UpdateRecord> {
         'url': url,
       };
 
-      db_Ref!.push().set(Contact).whenComplete(() {
+      db_Ref!.child(widget.Contact_Key).update(Contact).whenComplete(() {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
